@@ -1,0 +1,22 @@
+ArrayList<Circle> circles;
+
+void setup()
+{
+  size(640,360);
+  circles = new ArrayList<Circle>();
+  circles.add(new Circle(200,200));
+}
+
+void draw()
+{
+  background(0);
+  
+  for (Circle c : circles)
+  {
+  	if (c.edges())
+  		c.growing = false;
+  	
+  	c.show();
+  	c.grow();
+  }
+}

@@ -1,0 +1,26 @@
+class Circle
+{
+  float x;
+  float y;
+  float r;
+
+  Circle(float x ,float y)
+  {
+  	this.x = x ;
+  	this.y = y ; 
+    r = 50;
+  }
+
+  void show()
+  {
+  	stroke(255);
+  	strokeWeight(2);
+  	noFill();
+  	ellipse(x ,y ,r*2 ,r*2 );
+  }
+
+  void grow()
+  {
+  	r += 1;
+  }
+}
